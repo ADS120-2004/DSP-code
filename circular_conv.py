@@ -23,7 +23,7 @@
 def get(): 
     mx = int(input("Enter the no of samples in input signals: "))
     xnx = [int(input()) for x in range(mx)]
-    nx = int(input("Enter the no of samples in input signals: "))
+    nx = int(input("Enter the no of filter coefficinets: "))
     hnx = [int(input()) for x in range(nx)]
     return mx,xnx,nx,hnx
 
