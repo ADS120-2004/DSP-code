@@ -12,5 +12,5 @@ I've created a GitHub repository dedicated to providing Python implementations o
 ✅ Bridge the gap in resources for DSP enthusiasts.
 
 Why?
-There will not be any proper resource (Source-code) for these DSP-Code, inorder to mitigate these constraints, This repository will code for such DSP algorithms source code.
-You can make use of these codes for checking the manual calculated answer verification
+There will not be any proper resource (Source-code) for these DSP-Code, inorder to mitigate these constraints, This repository will provide source code for such DSP algorithms.
+You can make use of these codes for checking the manual calculated answer verification.
