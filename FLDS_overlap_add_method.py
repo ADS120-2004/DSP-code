@@ -19,8 +19,7 @@
         4. filter coefficients array
     And finally this function return all the input to the main function
 '''
-
-import numpy as np
+
 
 def get(): 
     mx = int(input("Enter the no of samples in input signals: "))
