@@ -1,5 +1,5 @@
 '''
-    This code will do filtering of long data sequence using Overlap add method
+    This code will do filtering of long data sequence using Overlap save method
       -> linear convolution is implemented using circular convolution
       -> This code uses martix method for circular convolution
     For easier understanding I divided the code into seperate functions
