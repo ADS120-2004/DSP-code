@@ -19,7 +19,8 @@
         4. filter coefficients array
     And finally this function return all the input to the main function
 '''
-
+
+import numpy as np
 
 def get(): 
     mx = int(input("Enter the no of samples in input signals: "))
@@ -133,7 +134,7 @@ par_out = []
 
 for j in xn_sz:
     par_out.append(convolution(j,hn_sz))
-
+print(par_out,"Par")
 full_out = []
 length = len(par_out)
 dummy = 0
@@ -143,9 +144,25 @@ back = 0
 one_lenght = len(par_out[0])
 for i in range(length):
     if i == 0:
-        full_out.extend(par_out[i][:one_lenght-n+1])
+        if len(par_out) > 2:
+            full_out.extend(par_out[i][:one_lenght-n+1])
+        else:
+            full_out.extend(par_out[i])
     if i == length-1:
-        full_out.extend(par_out[i][n-1:])
+        if len(par_out) > 2:
+            full_out.extend(par_out[i])
+        else:
+            full_out = push_zero(full_out,l+n-1)
+            block = []
+            block = push_zero(block,l)
+            block.extend(par_out[1])
+            print(block,"blo")
+            j = 0
+            out = []
+            for i in block:
+                out.append(full_out[j] + i)
+                j+=1
+            full_out = out
     if i != 0 and i != length-1:
         z = 0
         front = 0
@@ -163,5 +180,6 @@ for i in range(length):
                 full_out.append(k)
                 z+=1
 print(xn_s,"\n",hn_sz,"\n",par_out)
+
 print("Filtering long data sequence by overlap add method. \noutput: ")    
 print(full_out)
