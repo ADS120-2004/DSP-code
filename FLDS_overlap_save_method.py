@@ -135,11 +135,9 @@ def push_to_first_of_x_block(xn_s,n,l):
             block.extend(ans[i-1][-(n-1):])
             f=0
         block.append(j)
-        print(block)
         count += 1
         if count == l and len(xn_sz) > l:
             ans.append(block)
-            print(ans,"ans")
             block = []
             count = 0
             f = 1
@@ -160,11 +158,9 @@ def check(xn_sz,n,l):
     for i in last[-(n-1):]:
         if i == 0:
             con+=1
-    print(xn_sz)
     if con == n-1:
         pass
     elif con != n-1:
-        print("yes")
         block = []
         block.extend(last[-(n-1):])
         block = push_zero(block,l)
@@ -177,7 +173,6 @@ xn_s = []
 xn_s = splt(xn,l)
 xn_sz = push_to_first_of_x_block(xn,n,l)
 xn_sz = check(xn_sz,n,l)
-print(xn_sz)
 hn_sz = push_zero(hn,len(xn_sz[0])-len(hn))
 par_out = []
 for j in xn_sz:
