@@ -155,7 +155,6 @@ for i in range(length):
             block = []
             block = push_zero(block,l)
             block.extend(par_out[1])
-            print(block,"blo")
             j = 0
             out = []
             for i in block:
